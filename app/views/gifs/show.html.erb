@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="form">
+    <p class="title"><%= @gif.name %></p>
+    <%= image_tag(@gif.url) %>
+    <p class="form_label">Source: <%= @gif.url %><br>
+    <% if @gif.dog %>This gif features a dog<br><% end %>
+    Gif Tags: <%= @gif.keyword1 %> <%= @gif.keyword2 %> <%= @gif.keyword3 %></p>
+  
+  <%= link_to 'Edit', edit_gif_path(@gif), class: "button" %>
+  <%= link_to 'Back to All Gifs', gifs_path, class: "button" %>
+ </div>
+</div>

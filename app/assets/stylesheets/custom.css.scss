@@ -1,0 +1,84 @@
+/*Colors*/
+$maingreen: #00A000;
+$maingray: #D9D9D9;
+$mainyellow: #ffc000;
+$mainblue: #31859C;
+$mainfont: "Century Gothic";
+$mainred: #800000;
+
+/*Sizes*/
+$mainwidth: 900px;
+$bordercurve: 2px;
+
+body {
+  margin: auto;
+  background: white;
+  font-family: $mainfont;
+
+  header {
+    width: cover;
+    background: $mainred;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 0px;
+    text-align: center;
+  }
+
+  h1 { 
+    color: #fff;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font-size: 80px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  p.tagline {
+    color: white;
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #gif_index {
+    
+  }
+
+  #add_gif {
+    width: 100%;
+    text-align: center;
+    background: $mainblue;
+    font-size: 18px;
+  }
+
+  #add_gif:hover {
+    background: lighten($mainblue, 10);
+  }
+
+  p.title {
+    color: $mainblue;
+    font-size: 24px;
+    margin: 0 auto;
+  }
+
+  div.form {
+    width: $mainwidth/2;
+    margin: 0 auto;
+    padding: 10px 20px 0px 20px;
+    border: 2px solid $mainred;
+    margin-top: 10px;
+  }
+
+  p.form_label {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #gif_keyword1, #gif_keyword2, #gif_keyword3 {
+    width: 200px;
+    padding: 0px;
+  }
+
+}
