@@ -6,6 +6,8 @@ class Gif
   field :keyword2, type: String
   field :keyword3, type: String
   field :dog, type: Mongoid::Boolean
+  field :is_gif, type: Mongoid::Boolean
+  field :is_img, type: Mongoid::Boolean
 
   validates :url, uniqueness:true
 

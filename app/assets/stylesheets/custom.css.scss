@@ -81,4 +81,33 @@ body {
     padding: 0px;
   }
 
+  // Welcome Orbit
+
+
+  div#black_background {
+    background: black;
+    margin: 0 auto;
+    margin-top: 0px;
+  }
+
+  div.orbit-container {
+    width: $mainwidth/2;
+    height: $mainwidth/2;
+    margin: 0 auto;
+    backbround: black;
+  
+  }
+
+  .orbit-styling {
+    margin-top: 50px;
+  }
+
+  orbit_image {
+    width: 400px;
+    position: relative;
+    margin: 0 auto;
+    max-height: 250px;
+    margin-top: 50px;
+  }
+
 }

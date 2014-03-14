@@ -41,6 +41,10 @@ class GifsController < ApplicationController
     x.destroy
     redirect_to gifs_path
   end
+end
+
+  def welcome
+    @gifs = Gif.all
   end
 
   private

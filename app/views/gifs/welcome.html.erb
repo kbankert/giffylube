@@ -1,0 +1,12 @@
+<div class="container" id="black_background">
+  <%= link_to 'Explore the Lab', gifs_path, class: "button", id: "add_gif" %>
+  <div class="orbit-container">
+    <ul data-orbit class="orbit-styling">
+      <li class="orbit_image" class="active">
+        <% @gifs.each do |gif| %>
+        <%= image_tag(gif.url, :class => "orbit_image") %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
