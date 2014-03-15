@@ -24,6 +24,20 @@ body {
     margin: 0 auto;
     border-radius: 0px;
     text-align: center;
+  
+    img.header_star {
+      height: 160px;
+      width: 160px;
+      padding-top: 20px;
+    }
+
+    .no_link_decoration {
+      text-decoration: none;
+      color: white;
+    }
+    .no_link_decoration:hover {
+      color: #CCC;
+    }
   }
 
   h1 { 
@@ -32,6 +46,7 @@ body {
     font-size: 80px;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    text-decoration: none;
   }
 
   p.tagline {
@@ -43,6 +58,10 @@ body {
 
   #gif_index {
     
+  }
+
+  li.index_gif_box {
+
   }
 
   #add_gif {
@@ -58,7 +77,7 @@ body {
 
   p.title {
     color: $mainblue;
-    font-size: 24px;
+    font-size: 20px;
     margin: 0 auto;
   }
 
@@ -68,6 +87,13 @@ body {
     padding: 10px 20px 0px 20px;
     border: 2px solid $mainred;
     margin-top: 10px;
+  
+    div.url_link {
+      width: 150px;
+      margin: 0 auto;
+      padding: 2px;
+    }
+
   }
 
   p.form_label {

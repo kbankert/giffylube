@@ -1,8 +1,10 @@
 <div class="container">
   <div class="form">
     <p class="title"><%= @gif.name %></p>
-    <%= image_tag(@gif.url) %>
-    <p class="form_label">Source: <%= @gif.url %><br>
+    <%= image_tag(@gif.url) %><br>
+      <div class="url_link">
+        <a href="<%= @gif.url %>>" target="_blank">Link to Source</a><br>
+      </div><br>
     <% if @gif.dog %>This gif features a dog<br><% end %>
     Gif Tags: <%= @gif.keyword1 %> <%= @gif.keyword2 %> <%= @gif.keyword3 %></p>
   
