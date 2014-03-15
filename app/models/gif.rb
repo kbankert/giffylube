@@ -10,5 +10,6 @@ class Gif
   field :is_img, type: Mongoid::Boolean
 
   validates :url, uniqueness:true
+  validates :name, :url, presence:true
 
 end
