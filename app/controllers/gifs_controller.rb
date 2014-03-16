@@ -1,9 +1,20 @@
 class GifsController < ApplicationController
   
-  before_action :set_gif, only: [:show, :edit]
+  before_action :set_gif, only: [:show, :edit, :update, :destroy]
 
   def index
     @gifs = Gif.all
+    search_hash = {}
+    if params[:show_all] == "true"
+      @gifs = Gif.all
+    elsif params[:dog] == "true"
+      search_hash[:dog] = true
+    elsif params[:gif] == "true"
+      search_hash[:is_gif] = true
+    elsif params[:img] == "true"
+      search_hash[:is_img] = true
+    end
+    @gifs = Gif.where(search_hash)
   end
 
   def new
@@ -18,6 +29,7 @@ class GifsController < ApplicationController
     else
       render action: 'new'
       flash[:notice] = "Something went wrong. Please try, again."
+    end
   end
 
   def show
@@ -33,15 +45,14 @@ class GifsController < ApplicationController
       redirect_to @gif, notice: 'Your gif was successfully updated.'
     else
       render action: 'edit'
-    end
   end
 
   def destroy
     x = Gif.find(params[:id])
     x.destroy
     redirect_to gifs_path
+    end
   end
-end
 
   def welcome
     @gifs = Gif.all

@@ -6,9 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-gifs = Gif.create([
-
-  {
+[
+    {
     name: "Loose Canines",
     keyword1: "Dentist",
     keyword2: "Stuffed Animal",
@@ -16,9 +15,8 @@ gifs = Gif.create([
     url: "http://i.imgur.com/35v1OFC.jpg",
     dog: true,
     is_img: true,
-    is_gif: true
+    is_gif: false
   },
-
   {
     name: "Man's Best Workout Buddy",
     keyword1: "Leg day",
@@ -29,7 +27,6 @@ gifs = Gif.create([
     is_img: false,
     is_gif: true
   },
-
   {
     name: "Banana Test",
     keyword1: "Steve Carell",
@@ -40,7 +37,6 @@ gifs = Gif.create([
     is_img: true,
     is_gif: false
   },
-
   {
     name: "Dessert",
     keyword1: "Way tail",
@@ -51,7 +47,6 @@ gifs = Gif.create([
     is_img: false,
     is_gif: true
   },
-
   {
     name: "Bunny Ball",
     keyword1: "Bunny Rabbit",
@@ -61,4 +56,7 @@ gifs = Gif.create([
     dog: false,
     is_img: false,
     is_gif: true
-  }])
+  }
+].each do |attrs|
+    Gif.find_by(attrs.slice(:url)) || Gif.create(attrs)
+end
