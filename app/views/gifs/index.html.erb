@@ -1,47 +1,18 @@
-<%= link_to 'Add a New Image or Gif', new_gif_path, class: "button", id: "add_gif" %>
- <div class="container" id="index_container">
-  <% @gifs.each do |gif| %>
-    <div class="index_cell" >
-      <% name = gif.name %>
-      <p class="title"><%= link_to name, gif_path(gif) %></p>
-      <%= image_tag(gif.url, class: "gif_index") %>
-      <br>
-      <p class="gif_tags" >Tags: <%= gif.keyword1 %> <%= gif.keyword2 %> <%= gif.keyword3 %></p>
-    </div>
-  <% end %>
-</div>
-
-
-<!-- Check out Masonry jQuery thingy - THIS DOES NOT WORK -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="/path/to/jquery.masonry.min.js"></script>
-<script>
-// var $container = $('#index_container');
-// $(function(){
-//   $container.masonry({
-//     itemSelector: '#gif_index',
-//     isAnimated: true
-//   });
-// });
-
-</script>
-
-<!-- <div class="container">
-  <%#= link_to 'Add a New Image or Gif', new_gif_path, class: "button", id: "add_gif" %>
+<div class="container">
+  <%= link_to 'Add a New Image or Gif', new_gif_path, class: "button", id: "add_gif" %>
   <div class="row" >
     <div class="small-12 columns" id="gif_index" > 
       <ul class="small-block-grid-2 medium-block-grid-3" >
-        <%# @gifs.each do |gif| %>
+        <% @gifs.each do |gif| %>
           <li class="index_gif_box" >
-          <%# name = gif.name %>
-          <p class="title"><%#= link_to name, gif_path(gif) %></p>
-          <%#= image_tag(gif.url) %>
+          <% name = gif.name %>
+          <p class="title"><%= link_to name, gif_path(gif) %></p>
+          <%= image_tag(gif.url) %>
           <br>
-          <p class="gif_tags" >Tags: <%#= gif.keyword1 %> <%#= gif.keyword2 %> <%#= gif.keyword3 %></p>
+          <p class="gif_tags" >Tags: <%= gif.keyword1 %> <%= gif.keyword2 %> <%= gif.keyword3 %></p>
           </li>
-        <%# end %>
+        <% end %>
       </ul>
     </div>
   </div>
-</div> -->
+</div>
