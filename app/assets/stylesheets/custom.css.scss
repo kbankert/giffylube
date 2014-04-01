@@ -56,9 +56,6 @@ body {
     margin: 0px;
   }
 
-  #gif_index {
-    
-  }
 
   li.index_gif_box {
     margin: 0 auto;
@@ -73,6 +70,21 @@ body {
 
   #add_gif:hover {
     background: lighten($mainblue, 10);
+  }
+
+  div#index_container {
+    width: 1240px;
+    margin: 0 auto;
+  }
+
+  div.index_cell {
+    width: 300px;
+    margin-left: 10px;
+    float: left;
+  }
+
+  .gif_index {
+    width: 300px;
   }
 
   p.title {

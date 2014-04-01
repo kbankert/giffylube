@@ -5,8 +5,8 @@
       <li class="orbit_image" class="active">
         <% @gifs.each do |gif| %>
         <%= image_tag(gif.url, :class => "orbit_image") %>
+        <% end %>
       </li>
-      <% end %>
     </ul>
   </div>
 </div>
