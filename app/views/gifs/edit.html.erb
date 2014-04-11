@@ -14,7 +14,7 @@
       <%= f.text_field :keyword2 %>
       <%= f.text_field :keyword3 %>
       <%= f.submit 'Save', :class => "button" %>
-      <%= link_to "Delete", gif_path(@gif), {method: :delete, confirm: "Please confirm that you would like to delete this gif.", :class => "button alert" } %>
+      <%= link_to "Delete", gif_path(@gif), {method: :delete, :class => "button alert" } %>
       <%= link_to 'Back', gif_path(@gif), :class => "button" %> 
     <% end %>
   </div>

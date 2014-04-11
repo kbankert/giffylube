@@ -48,7 +48,7 @@ class GifsController < ApplicationController
   end
 
   def destroy
-    x = Gif.find(params[:id])
+    x = @gif
     x.destroy
     redirect_to gifs_path
     end
