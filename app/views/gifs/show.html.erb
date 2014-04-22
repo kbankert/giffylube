@@ -6,6 +6,8 @@
         <a href="<%= @gif.url %>>" target="_blank">Link to Source</a><br>
       </div><br>
     <% if @gif.dog %>This gif features a dog<br><% end %>
+    <% if @gif.is_img %>This is an image<br><% end %>
+    <% if @gif.is_gif %>This is a gif<br><% end %>
     Gif Tags: <%= @gif.keyword1 %> <%= @gif.keyword2 %> <%= @gif.keyword3 %></p>
   
   <%= link_to 'Edit', edit_gif_path(@gif), class: "button" %>

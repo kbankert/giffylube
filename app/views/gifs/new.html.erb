@@ -7,8 +7,8 @@
       <p class="form_label">Gif URL</p>
       <%= f.text_field :url %>
       <p class="form_label"><%= f.check_box :dog %> Check this box if this gif features a dog</p>
-      <p class="form_label">Is this a gif or image? <%= f.check_box :is_gif %> Gif 
-        <%= f.check_box :is_img %> Image</p>
+      <p class="form_label"><%= f.check_box :is_gif %> This is a gif</p>
+      <p class="form_label"><%= f.check_box :is_img %> This is an image</p>
       <p class="form_label">Gif Tags:</p>
       <%= f.text_field :keyword1 %>
       <%= f.text_field :keyword2 %>

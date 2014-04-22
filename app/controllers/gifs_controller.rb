@@ -65,7 +65,7 @@ class GifsController < ApplicationController
   end
   
   def gif_params
-    params.require(:gif).permit(:name, :keyword1, :keyword2, :keyword3, :url, :dog)
+    params.require(:gif).permit(:name, :keyword1, :keyword2, :keyword3, :url, :dog, :is_img, :is_gif)
   end
 
 end
